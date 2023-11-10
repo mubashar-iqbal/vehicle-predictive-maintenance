@@ -1,1 +1,1 @@
-# vehivle-predictive-maintenance
+# vehicle-predictive-maintenance
