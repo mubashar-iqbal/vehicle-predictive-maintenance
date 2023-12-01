@@ -1,0 +1,22 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:vehicle:brake_page_sensor;1",
+    "@type": "Interface",
+    "displayName": "Brake Pad Sensor Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Brake Pad Sensor Id",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "SensorState",
+            "schema": "string",
+            "description": "Funcational and Non-Functional State of Brake Pad Sensor",
+            "writable": true
+        }
+    ]
+}

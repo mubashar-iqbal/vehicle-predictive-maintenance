@@ -1,0 +1,252 @@
+{
+    "@id": "dtmi:vehicle:interface;1",
+    "@type": "Interface",
+    "displayName": "Internet of Vehicle Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Vehicle ID",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Model",
+            "schema": "string",
+            "description": "Vehicle Model",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Manufacturer",
+            "schema": "string",
+            "description": "Vehicle Manufacturer",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "Year",
+            "schema": "string",
+            "description": "Vehicle Year",
+            "writable": true
+        },
+        {
+            "@type": "Telemetry",
+            "name": "Transmission",
+            "description": "Vehicle Transmission Type",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "integer",
+                "enumValues": [
+                    {
+                        "name": "Manual",
+                        "displayName": "Manual transmission",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Automatic",
+                        "displayName": "Automatic transmission",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "SemiAutomatic",
+                        "displayName": "Semi-Automatic transmission",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "DualClutch",
+                        "displayName": "Dual Clutch transmission",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "DrivetrainType",
+            "description": "Drivetrain type",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "integer",
+                "enumValues": [
+                    {
+                        "name": "AWD",
+                        "displayName": "All wheel drive",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "FWD",
+                        "displayName": "Front wheel drive",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "RWD",
+                        "displayName": "Rear wheel drive",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "4WD",
+                        "displayName": "Four wheel drive",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "FuelType",
+            "description": "Fuel type",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "integer",
+                "enumValues": [
+                    {
+                        "name": "Diesel",
+                        "displayName": "All wheel drive",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "Petrol",
+                        "displayName": "Gasoline or Petrol",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "CNG",
+                        "displayName": "Compressed natural gas",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "LPG",
+                        "displayName": "Liquefied petroleum gas",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "EngineSensorLocation",
+            "description": "Engine Sensor Location",
+            "schema": {
+                "@id": "dtmi:vehicle:engine_sensor:location;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:vehicle:engine_sensor:location:lat;1",
+                        "name": "Latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:engine_sensor:location:lon;1",
+                        "name": "Longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "BatterySensorLocation",
+            "description": "Battery Sensor Location",
+            "schema": {
+                "@id": "dtmi:vehicle:battery_sensor:location;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:vehicle:battery_sensor:location:lat;1",
+                        "name": "Latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:battery_sensor:location:lon;1",
+                        "name": "Longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "CoolantSensorLocation",
+            "description": "Coolant Sensor Location",
+            "schema": {
+                "@id": "dtmi:vehicle:coolant_sensor:location;1",
+                "@type": "Object",
+                "fields": [
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:location:lat;1",
+                        "name": "Latitude",
+                        "schema": "double"
+                    },
+                    {
+                        "@id": "dtmi:vehicle:coolant_sensor:location:lon;1",
+                        "name": "Longitude",
+                        "schema": "double"
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Property",
+            "name": "BrakePadSensorLocation",
+            "description": "Brake Pads Wear Sensor Location",
+            "schema": {
+                "@id": "dtmi:vehicle:brake_pad_sensor:location;1",
+                "@type": "Enum",
+                "valueSchema": "integer",
+                "enumValues": [
+                    {
+                        "name": "FrontRight",
+                        "displayName": "Front Right Wheel Brake Pad",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "FrontLeft",
+                        "displayName": "Front Left Wheel Brake Pad",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "RearRight",
+                        "displayName": "Rear Right Wheel Brake Pad",
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "RearLeft",
+                        "displayName": "Rear Left Wheel Brake Pad",
+                        "enumValue": 4
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_engine;1",
+            "name": "rel_has_engine",
+            "displayName": "Vehicle has engine",
+            "target": "dtmi:vehicle:engine;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_battery_sensor;1",
+            "name": "rel_has_battery_sensor",
+            "displayName": "Vehicle has battery sensor",
+            "target": "dtmi:vehicle:battery_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_coolant_sensor;1",
+            "name": "rel_has_coolant_sensor",
+            "displayName": "Vehicle has coolant sensor",
+            "target": "dtmi:vehicle:coolant_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_brake_pad_sensor;1",
+            "name": "rel_has_coolanrel_has_brake_pad_sensort_sensor",
+            "displayName": "Vehicle has brake pad wear sensor",
+            "target": "dtmi:vehicle:brake_pad_sensor;1"
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:vehicle:engine;1",
+    "@type": "Interface",
+    "displayName": "Vehicle Engine Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Engine Id",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "CoolantTemperature",
+            "schema": "double",
+            "description": "Coolant Temperature",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "CoolantPressure",
+            "schema": "double",
+            "description": "Coolant Pressure",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "EngineOilTemperature",
+            "schema": "double",
+            "description": "Engine Oil Temperature",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "EngineOilPressure",
+            "schema": "double",
+            "description": "Engine Oil Pressure",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "EngineRPM",
+            "schema": "integer",
+            "description": "Engine RPM",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ThrottleValvePosition",
+            "schema": "double",
+            "description": "Throttle Valve Position",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "FuelPressure",
+            "schema": "double",
+            "description": "Fuel Pressure",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "EngineCondition",
+            "schema": "string",
+            "description": "Engine Condition (Either Good or Bad)",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "SensorState",
+            "schema": "string",
+            "description": "Funcational and Non-Functional State of Engine Sensor",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_coolant_sensor;1",
+            "name": "rel_has_coolant_sensor",
+            "displayName": "Vehicle has coolant sensor",
+            "target": "dtmi:vehicle:coolant_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_engine_oil_sensor;1",
+            "name": "rel_has_engine_oil_sensor",
+            "displayName": "Vehicle has engine oil sensor",
+            "target": "dtmi:vehicle:engine_oil_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_crankshaft_sensor;1",
+            "name": "rel_has_crankshaft_sensor",
+            "displayName": "Vehicle has crankshaft sensor",
+            "target": "dtmi:vehicle:crankshaft_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_throttle_sensor;1",
+            "name": "rel_has_throttle_sensor",
+            "displayName": "Vehicle has throttle sensor",
+            "target": "dtmi:vehicle:throttle_sensor;1"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:vehicle:rel_has_fuel_pressure_sensor;1",
+            "name": "rel_has_fuel_pressure_sensor",
+            "displayName": "Vehicle has fuel pressure sensor",
+            "target": "dtmi:vehicle:fuel_pressure_sensor;1"
+        }
+    ]
+}

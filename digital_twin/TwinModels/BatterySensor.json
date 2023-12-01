@@ -1,0 +1,85 @@
+{
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:vehicle:battery_sensor;1",
+    "@type": "Interface",
+    "displayName": "Battery Sensor Interface Model",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "Id",
+            "schema": "string",
+            "description": "Battery Sensor Id",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "SensorState",
+            "schema": "string",
+            "description": "Funcational and Non-Functional State of Battery Sensor",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "CycleIndex",
+            "schema": "double",
+            "description": "Cycle Index",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "DischargeTime",
+            "schema": "double",
+            "description": "Discharge Time",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "MaxVoltageDischarging",
+            "schema": "double",
+            "description": "Max Volatage Discharging",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "MinVoltageCharging",
+            "schema": "double",
+            "description": "Min Volatage Charging",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "TimeAt4.15V",
+            "schema": "double",
+            "description": "Time at 4.25 V in Seconds",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "DecrementBetween3.6And3.4V",
+            "schema": "double",
+            "description": "Decrement between 3.6-3.4 V in Seconds",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "TimeConstantCurrent",
+            "schema": "double",
+            "description": "Time Constant Current in Seconds",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "ChargingTime",
+            "schema": "double",
+            "description": "Charging Time in Seconds",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "RUL",
+            "schema": "double",
+            "description": "Remaining Useful Life of Battery",
+            "writable": true
+        }
+    ]
+}
